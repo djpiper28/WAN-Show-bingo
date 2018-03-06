@@ -63,12 +63,18 @@ public class main {
 		return output;
 	}
 	
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String [] args) {
+		System.out.print("Program started.");
 		String[] Items = randomiseBingo();
 		window Window = new window();		
 		Window.init(Items);
-		Window.main();
+		try {
+			Window.main();
+		} catch (InterruptedException e) {
+			System.out.print("Weird error lol");
+			e.printStackTrace();
+		}
 		System.out.print("Finished, program exiting.");
 	}
-
+	
 }

@@ -40,17 +40,17 @@ public class window {
 	public JButton button7;
 	public JButton button8;
 	public JButton button9;
-	public JButton finished = new JButton("You win!!");
+	public JButton finished = new JButton("You have won incase you didn't notice.");
     public JPanel panel = new JPanel();
 	
 	public void main() throws InterruptedException {
 		this.finished.setBounds(0, 150, 300, 100);
-		this.finished.resize(2, 2);
 		this.button1 = new JButton(this.items[0]);
 		this.button1.addActionListener(new ActionListener() {	        
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				activated[0]=true;
+		        button1.setForeground(Color.RED);
 				System.out.print(0);
 			}          
 	      });
@@ -59,6 +59,7 @@ public class window {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				activated[1]=true;
+		        button2.setForeground(Color.RED);
 				System.out.print(1);
 			}          
 	      });
@@ -67,6 +68,7 @@ public class window {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				activated[2]=true;
+		        button3.setForeground(Color.RED);
 				System.out.print(2);
 			}          
 	      });
@@ -75,6 +77,7 @@ public class window {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				activated[3]=true;
+		        button4.setForeground(Color.RED);
 				System.out.print(3);
 			}          
 	      });
@@ -83,6 +86,7 @@ public class window {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				activated[4]=true;
+		        button5.setForeground(Color.RED);
 				System.out.print(4);
 			}          
 	      });
@@ -91,6 +95,7 @@ public class window {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				activated[5]=true;
+		        button6.setForeground(Color.RED);
 				System.out.print(5);
 			}          
 	      });
@@ -99,6 +104,7 @@ public class window {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				activated[6]=true;
+		        button7.setForeground(Color.RED);
 				System.out.print(6);
 			}          
 	      });
@@ -107,6 +113,7 @@ public class window {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				activated[7]=true;
+		        button8.setForeground(Color.RED);
 				System.out.print(7);
 			}          
 	      });
@@ -115,6 +122,7 @@ public class window {
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				activated[8]=true;
+		        button9.setForeground(Color.RED);
 				System.out.print(8);
 			}          
 	      });
@@ -160,38 +168,12 @@ public class window {
 		    this.panel.add(button8);
 		    this.panel.add(button9);
 		}
-		if(activated[0]) {
-	        this.button1.setForeground(Color.RED);
-		}
-		if(activated[1]) {
-	        this.button2.setForeground(Color.RED);
-		}
-		if(activated[2]) {
-	        this.button3.setForeground(Color.RED);
-		}
-		if(activated[3]) {
-	        this.button4.setForeground(Color.RED);
-		}
-		if(activated[4]) {
-	        this.button5.setForeground(Color.RED);
-		}
-		if(activated[5]) {
-	        this.button6.setForeground(Color.RED);
-		}
-		if(activated[6]) {
-	        this.button7.setForeground(Color.RED);
-		}
-		if(activated[7]) {
-	        this.button8.setForeground(Color.RED);
-		}
-		if(activated[8]) {
-	        this.button9.setForeground(Color.RED);
-		}
 	    this.frame.getContentPane().add(panel);
 		this.frame.setBounds(100, 100, 300, 400);
 		this.frame.setAlwaysOnTop(true);
 		this.frame.setVisible(true);
 		this.frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+		this.frame.setName("WAN Show Bingo");	
 	}
 	
 	public void activateButton1(){
