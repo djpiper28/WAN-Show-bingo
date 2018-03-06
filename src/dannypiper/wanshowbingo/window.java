@@ -2,6 +2,7 @@
  * 
  */
 package dannypiper.wanshowbingo;
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.concurrent.TimeUnit;
@@ -9,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.plaf.SliderUI;
 
@@ -26,6 +28,7 @@ public class window {
 			false, false, false
 	};
 	public String[] items;
+	public boolean done = false;
 	public JFrame frame = new JFrame();
 	public JButton button1;
 	public JButton button2;
@@ -133,6 +136,7 @@ public class window {
 	public void init(String[] Items) {
 		this.items = Items;
 		this.frame.setName("WAN Show Bingo");
+		this.frame.setLayout(new GridLayout(1, 10));
 	}
 	
 	public void render() {
@@ -140,6 +144,10 @@ public class window {
 		this.frame.setName("WAN Show Bingo");	    
 		if(checkActivated()) {
 		    this.panel.add(finished);
+		    if (!this.done) {
+		    	JOptionPane.showMessageDialog(this.frame, "You Win!!");
+		    	this.done = true;
+		    }
 		} else {
 			this.panel.add(button1);
 		    this.panel.add(button2);
