@@ -2,6 +2,7 @@
  * 
  */
 package dannypiper.wanshowbingo;
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -158,6 +159,33 @@ public class window {
 		    this.panel.add(button7);
 		    this.panel.add(button8);
 		    this.panel.add(button9);
+		}
+		if(activated[0]) {
+	        this.button1.setForeground(Color.RED);
+		}
+		if(activated[1]) {
+	        this.button2.setForeground(Color.RED);
+		}
+		if(activated[2]) {
+	        this.button3.setForeground(Color.RED);
+		}
+		if(activated[3]) {
+	        this.button4.setForeground(Color.RED);
+		}
+		if(activated[4]) {
+	        this.button5.setForeground(Color.RED);
+		}
+		if(activated[5]) {
+	        this.button6.setForeground(Color.RED);
+		}
+		if(activated[6]) {
+	        this.button7.setForeground(Color.RED);
+		}
+		if(activated[7]) {
+	        this.button8.setForeground(Color.RED);
+		}
+		if(activated[8]) {
+	        this.button9.setForeground(Color.RED);
 		}
 	    this.frame.getContentPane().add(panel);
 		this.frame.setBounds(100, 100, 300, 400);
